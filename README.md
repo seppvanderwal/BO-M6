@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<style>
+<style> 
     * {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
