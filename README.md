@@ -10,17 +10,7 @@
 </h1>
 
 <h4>
-    Gemaakt door: 
+    Gemaakt door:
 </h4>
 
 <img class="Icon" src="readme/Image.avif"></img>
-
-<h1 class="Title">
-    Explaination
-</h1>
-
-<img class src="readme/Dashing.gif">
-    <footer>
-        <p>Dashing Gif</p>
-    </footer>
-</img>
