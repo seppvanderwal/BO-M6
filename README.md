@@ -5,44 +5,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<style> 
-    * {
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-    }
-
-    .Icon {
-        padding: auto;
-        margin: auto;
-        width:100%;
-    }
-
-    .Title {
-        font-family: 'Verdana'
-    }
-
-    img {
-        display:block;
-        width:90%;
-        height:30%;
-    }
-
-    body{
-        background: rgb(20,20,20);
-    }
-
-    p {
-        font-size: 120%
-    }
-
-    footer > p {
-        color: rgb(255,255,255);
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-size: 95%;
-    }
-</style>
-
 <h1 class="Title">
     Hades Project
 </h1>
