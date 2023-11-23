@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Movement : MonoBehaviour
 {
    public CharacterController controller;
-
    public float speed = 6f;
+   public float turnSmoothTime = 0.1f;
+   float turnSmoothVelocity;
     void Update()
     {
         float horizantal = Input.GetAxisRaw("Horizontal");
@@ -16,7 +16,8 @@ public class Movement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float targetAngel = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, targetAngel, 0f);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngel, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             controller.Move(direction * speed * Time.deltaTime);
         }
