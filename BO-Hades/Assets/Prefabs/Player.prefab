@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6494984263400671291}
   - component: {fileID: 2156651046765260888}
   - component: {fileID: 6901862429905682689}
+  - component: {fileID: 8736553052889612214}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -151,6 +152,26 @@ MonoBehaviour:
   controller: {fileID: 2156651046765260888}
   speed: 6
   turnSmoothTime: 0.1
+--- !u!95 &8736553052889612214
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258976087073452243}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a2cdef7043e5d8d4885569813f89a2dd, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5aace44e55c7b7a4c87a1e0cf18d425b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7149572645201482920
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,14 +197,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7149572645201482920}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalScale: {x: -0.03, y: -0.03, z: -0.03}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6494984263400671291}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3799047369458290591
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -191,7 +212,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7149572645201482920}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 5687408370629444372, guid: b1f544490c2d2a14a96016292b9d7889, type: 3}
 --- !u!23 &2939369145768546277
 MeshRenderer:
   m_ObjectHideFlags: 0
