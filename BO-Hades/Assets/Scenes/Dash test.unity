@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,6 +347,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &439066335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3258976087073452243, guid: 8a4111ccc7164054385b068d1d1e777b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1445696520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &638297143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 953950030345221728, guid: 8a4111ccc7164054385b068d1d1e777b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1445696520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1040998212
 GameObject:
   m_ObjectHideFlags: 3
@@ -509,6 +521,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 112763460}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: gravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 638297143}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4111ccc7164054385b068d1d1e777b, type: 3}
 --- !u!4 &1645462532 stripped
@@ -517,6 +554,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1445696520}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1645462534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439066335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f3bd329ff0d644e8df0c4d492c6ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 6
+  dashTime: 0.25
 --- !u!1 &1735958782
 GameObject:
   m_ObjectHideFlags: 0
