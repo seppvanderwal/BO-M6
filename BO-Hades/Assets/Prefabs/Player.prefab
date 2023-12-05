@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6494984263400671291}
   - component: {fileID: 2156651046765260888}
   - component: {fileID: 6901862429905682689}
+  - component: {fileID: 5048668935601180336}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,9 +149,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d52053a5478545928f3632ba9d267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmove: 1
   controller: {fileID: 2156651046765260888}
-  speed: 6
+  speed: 5
   turnSmoothTime: 0.1
+--- !u!114 &5048668935601180336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258976087073452243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f3bd329ff0d644e8df0c4d492c6ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 10
+  dashTime: 0.25
+  dashingTime: 0.2
+  dashingCooldown: 1
 --- !u!1 &7149572645201482920
 GameObject:
   m_ObjectHideFlags: 0

@@ -1057,14 +1057,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6901862429905682689, guid: 8a4111ccc7164054385b068d1d1e777b,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4111ccc7164054385b068d1d1e777b, type: 3}
---- !u!1 &623953026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3258976087073452243, guid: 8a4111ccc7164054385b068d1d1e777b,
-    type: 3}
-  m_PrefabInstance: {fileID: 623953025}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &774661835
 GameObject:
   m_ObjectHideFlags: 3
@@ -2317,22 +2316,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 623953025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1571584287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623953026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f3bd329ff0d644e8df0c4d492c6ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 10
-  dashTime: 0.25
-  dashingTime: 0.2
-  dashingCooldown: 1
 --- !u!1 &1585029734
 GameObject:
   m_ObjectHideFlags: 0
