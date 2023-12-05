@@ -28,8 +28,10 @@ public class PlayerDash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
+            gameObject.GetComponent<Movement>().canmove = false;
             StartCoroutine(Dash());
         }
+
     }
 
     IEnumerator Dash()
@@ -42,20 +44,24 @@ public class PlayerDash : MonoBehaviour
         while (Time.time < startTime + dashTime)
         {
             // Calculate movement during the dash directly in this script
-            Vector3 dashDirection = GetInputDirection();
+            Vector3 dashDirection = transform.forward;
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
 
             yield return null;
         }
+        gameObject.GetComponent<Movement>().canmove = true;
+
 
         // Wait for the dash time
         yield return new WaitForSeconds(dashingTime);
+
 
 
         // Wait for the dash cooldown and enable dashing again
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
         isDashing = false;
+
 
         yield break;
     }
