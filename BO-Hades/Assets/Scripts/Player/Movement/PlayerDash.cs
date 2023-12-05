@@ -10,6 +10,7 @@ public class PlayerDash : MonoBehaviour
     private bool canDash = true;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
+    public AudioSource dashAudioSource;
 
 
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class PlayerDash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
+            dashAudioSource.Play();
             gameObject.GetComponent<Movement>().canmove = false;
             StartCoroutine(Dash());
         }
@@ -49,6 +51,7 @@ public class PlayerDash : MonoBehaviour
 
             yield return null;
         }
+
         gameObject.GetComponent<Movement>().canmove = true;
 
 
