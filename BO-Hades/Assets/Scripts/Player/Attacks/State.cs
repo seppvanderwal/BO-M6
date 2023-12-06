@@ -17,10 +17,10 @@ public class State : MonoBehaviour
 
         var animatorController = animator.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
 
+        animations.Add(transform, new());
+
         foreach (var layer in animatorController.layers)
         {
-            animations.Add(transform, new(layer.stateMachine.states.Length));
-
             foreach (var animationState in layer.stateMachine.states)
             {
                 string state = animationState.state.name;
@@ -36,7 +36,9 @@ public class State : MonoBehaviour
             }
         }
 
-        state.Add(transform, "Idle");
+        state.Add(transform, "");
+
+        ChangeState(transform, "Idle");
     }
 
     internal void ChangeState(Transform character, string newState)
