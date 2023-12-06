@@ -4,12 +4,13 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     CharacterController controller;
-    public float dashSpeed;
+    public const float dashSpeed = 1f;
     public float dashTime;
     private bool isDashing;
     private bool canDash = true;
     public float dashingTime = 0.2f;
     public float dashingCooldown = 1f;
+    public AudioSource dashAudioSource;
 
 
     // Start is called before the first frame update
@@ -28,8 +29,11 @@ public class PlayerDash : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
+            dashAudioSource.Play();
+            gameObject.GetComponent<Movement>().canmove = false;
             StartCoroutine(Dash());
         }
+
     }
 
     IEnumerator Dash()
@@ -42,20 +46,25 @@ public class PlayerDash : MonoBehaviour
         while (Time.time < startTime + dashTime)
         {
             // Calculate movement during the dash directly in this script
-            Vector3 dashDirection = GetInputDirection();
+            Vector3 dashDirection = transform.forward;
             controller.Move(dashDirection * dashSpeed * Time.deltaTime);
 
             yield return null;
         }
 
+        gameObject.GetComponent<Movement>().canmove = true;
+
+
         // Wait for the dash time
         yield return new WaitForSeconds(dashingTime);
+
 
 
         // Wait for the dash cooldown and enable dashing again
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
         isDashing = false;
+
 
         yield break;
     }
