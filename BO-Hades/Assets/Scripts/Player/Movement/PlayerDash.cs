@@ -1,10 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
     CharacterController controller;
-    public const float dashSpeed = 1f;
+    public float dashSpeed;
     public float dashTime;
     private bool isDashing;
     private bool canDash = true;
