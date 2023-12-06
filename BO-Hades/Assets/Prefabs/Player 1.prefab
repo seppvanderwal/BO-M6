@@ -92,7 +92,7 @@ MonoBehaviour:
   dashSpeed: 10
   dashTime: 0.25
   dashingTime: 0.2
-  dashingCooldown: 1
+  dashingCooldown: 0.5
   dashAudioSource: {fileID: 6364120176717613946}
 --- !u!114 &7530222339863675525
 MonoBehaviour:
