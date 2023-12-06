@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     CharacterController controller;
-    public float dashSpeed;
+    public const float dashSpeed = 1f;
     public float dashTime;
     private bool isDashing;
     private bool canDash = true;
