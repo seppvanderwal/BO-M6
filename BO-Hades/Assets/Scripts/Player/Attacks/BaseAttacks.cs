@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class BaseAttacks : MonoBehaviour
 {
+    public static Dictionary<string, List<Special>> Specials = new();
+
     public static Attack currentAttack;
 
     public Transform meleepoint;
 
     public List<float> combo;
 
-    private KeyCode key;
-
     //private bool pressing = false;
-
-    private void Start()
-    {
-        key = (KeyCode)System.Enum.Parse(typeof(KeyCode), "Q");
-    }
 
     void Update()
     {
+        foreach (var special in Specials)
+        {
+            if (Input.GetKeyDown(special.key))
+            {
+                Debug.Log("key has been pressed");
+            }
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(Fire());
-        }
-
-        if (Input.GetKeyDown(key))
-        {
-            Debug.Log("the one piece is wheel!");
         }
 
         /*
@@ -63,7 +61,7 @@ public class BaseAttacks : MonoBehaviour
         }*/
     }
 
-    internal static IEnumerator Fire()
+    private IEnumerator Fire()
     {
         Attack attack = currentAttack;
 
@@ -95,6 +93,12 @@ public class BaseAttacks : MonoBehaviour
             }
         }
     }
+
+    /*
+    private IEnumerator Fire_Special()
+    {
+
+    }*/
 }
 
 public class Attack
@@ -215,11 +219,31 @@ public class Attack
 
 public class Special
 {
+    internal static Dictionary<Transform, bool> inSpecial = new();
+
     internal string name;
 
-    internal Special(string name, Transform character)
+    internal Transform character;
+
+    internal KeyCode key;
+
+    internal Special(string Name, Transform character, KeyCode key)
     {
+        this.name = Name;
+
+        this.character = character;
+
+        this.key = key;
+
+        Dictionary<string, Special> result;
+
+        BaseAttacks.Specials.TryGetValue(name, out result);
+
+        if (result == null)
+        {
+            Attacks.Add(character, new());
+        }
 
     }
-
 }
+

@@ -18,6 +18,7 @@ public class State : MonoBehaviour
         var animatorController = animator.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
 
         animations.Add(transform, new());
+        state.Add(transform, "");
 
         foreach (var layer in animatorController.layers)
         {
@@ -31,12 +32,17 @@ public class State : MonoBehaviour
 
                     new Attack(state, index, transform, this);
                 }
+                else if (Regex.IsMatch(state, "Special"))
+                {
+                    string lastDigit = state.Substring(state.Length - 1);
+                    KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), lastDigit);
+
+                    new Special(state, transform, key);
+                }
 
                 animations[transform].Add(state);
             }
         }
-
-        state.Add(transform, "");
 
         ChangeState(transform, "Idle");
     }
