@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 public class Movement : MonoBehaviour
 {
-   public bool canmove = true;
-   public CharacterController controller;
-   public float speed = 6f;
-   public float turnSmoothTime = 0.1f;
-   float turnSmoothVelocity;
+    public bool canmove = true;
+    public CharacterController controller;
+    public float speed = 6f;
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
     void Update()
     {
         if (!canmove)
@@ -18,7 +16,7 @@ public class Movement : MonoBehaviour
         float horizantal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizantal, 0f, vertical).normalized;
-    
+
         if (direction.magnitude >= 0.1f)
         {
             float targetAngel = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
