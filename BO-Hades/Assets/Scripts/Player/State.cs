@@ -7,9 +7,7 @@ public class State : MonoBehaviour
     private static Dictionary<Transform, List<string>> animations = new();
     private static Dictionary<Transform, string> state = new();
 
-    internal Animator animator;
-
-    internal bool boolean = false;
+    private Animator animator;
 
     void Start()
     {
@@ -30,14 +28,14 @@ public class State : MonoBehaviour
                 {
                     int index = int.Parse(Regex.Match(animationState.state.name, @"\d+").Value) - 1;
 
-                    new Attack(state, index, transform, this);
+                    new Attack(state, this, transform, index);
                 }
                 else if (Regex.IsMatch(state, "Special"))
                 {
                     string lastDigit = state.Substring(state.Length - 1);
                     KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), lastDigit);
 
-                    new Special(state, transform, key);
+                    new Special(state, this, transform, key);
                 }
 
                 animations[transform].Add(state);
@@ -85,3 +83,5 @@ public class State : MonoBehaviour
         animator.CrossFade(state[character], .2f);
     }
 }
+
+
