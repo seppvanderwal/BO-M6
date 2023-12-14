@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 46067022239929255}
   - component: {fileID: 4809062094302748950}
   - component: {fileID: 1294321411607986546}
-  - component: {fileID: 5203724456420304928}
+  - component: {fileID: 6814412319595854609}
+  - component: {fileID: 7462040494376684456}
   m_Layer: 0
   m_Name: specialhitbox
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +106,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 3.7859821
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -181,7 +182,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!135 &5203724456420304928
+--- !u!54 &6814412319595854609
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791173332538958084}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!135 &7462040494376684456
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
