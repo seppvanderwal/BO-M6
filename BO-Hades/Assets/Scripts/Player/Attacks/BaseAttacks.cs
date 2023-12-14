@@ -9,8 +9,6 @@ public class BaseAttacks : MonoBehaviour
 
     public static Attack CurrentAttack;
 
-    public Transform meleepoint;
-
     public List<float> combo;
 
     private State UserStates;
