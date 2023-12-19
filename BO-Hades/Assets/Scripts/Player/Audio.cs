@@ -21,7 +21,11 @@ public class Audio : MonoBehaviour
 
     public void Play(string name)
     {
-        if (namelater[name])
+        if (name == null)
+        {
+            SFX.Stop();
+        }
+        else if (namelater[name])
         {
             AudioClip clip = namelater[name];
 
