@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -281,17 +281,17 @@ PrefabInstance:
     - target: {fileID: 529047932863975490, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.347606
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 529047932863975490, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0.051
       objectReference: {fileID: 0}
     - target: {fileID: 529047932863975490, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.573149
+      value: 7.986
       objectReference: {fileID: 0}
     - target: {fileID: 529047932863975490, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
         type: 3}
@@ -335,6 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529047933897577936, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529047933897577936, guid: 6e9a09305b7e09b459929f7b8d8ba3a0,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -347,7 +352,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1919022885}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e9a09305b7e09b459929f7b8d8ba3a0, type: 3}
 --- !u!1001 &990863539
@@ -419,3 +424,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16364a4f05bb59b458ac59fb99f34165, type: 3}
+--- !u!4 &1919022885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6792478106991100947, guid: 16364a4f05bb59b458ac59fb99f34165,
+    type: 3}
+  m_PrefabInstance: {fileID: 990863539}
+  m_PrefabAsset: {fileID: 0}
