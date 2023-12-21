@@ -298,8 +298,8 @@ MonoBehaviour:
   - {fileID: 7018393854338583138}
   - {fileID: 2692249951255767635}
   m_Bounds:
-    m_Center: {x: -0.0047352314, y: -0.02072382, z: -0.00000004310516}
-    m_Extent: {x: 3.214275, y: 4.119275, z: 0.00000055976943}
+    m_Center: {x: -0.004734993, y: -0.020724297, z: 0.00000027576624}
+    m_Extent: {x: 3.214275, y: 4.1192746, z: 0.0000006927561}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -538,7 +538,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4453287685310912886, guid: b605ea4a9340f3b4ea2fae5d1255233d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
@@ -570,8 +570,8 @@ MonoBehaviour:
   - {fileID: 3496690231532944634}
   - {fileID: 7998664772274337467}
   m_Bounds:
-    m_Center: {x: -0.076678276, y: -0.049999, z: 0.00000019581609}
-    m_Extent: {x: 1.691675, y: 1.7050004, z: 0.0000003070498}
+    m_Center: {x: -0.07667458, y: -0.04999876, z: 0.00000020362535}
+    m_Extent: {x: 1.6916751, y: 1.7050002, z: 0.00000069390103}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

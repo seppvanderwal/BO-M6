@@ -44,37 +44,6 @@ public class BaseAttacks : MonoBehaviour
         {
             StartCoroutine(Fire());
         }
-
-        /*
-        // Base Code for walking
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            pressing = false;
-
-            State UserStates = GetComponent<State>();
-
-            string state = UserStates.GetState();
-
-            if (state == "Idle" || state == "Walking")
-            {
-                UserStates.ChangeState(transform, "Idle");
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.W) || pressing)
-        {
-            pressing = true;
-
-            State UserStates = GetComponent<State>();
-
-            string state = UserStates.GetState();
-
-            if (state == "Idle" || state == "Walking")
-            {
-                Debug.Log("moving");
-                UserStates.ChangeState(transform, "Walking");
-            }
-        }*/
     }
 
     private IEnumerator Fire()
@@ -88,9 +57,12 @@ public class BaseAttacks : MonoBehaviour
             attack.playAnimation(null);
             UserAudio.Play(attack.name);
 
+            yield return new WaitForSeconds(.4f);
+
+            Hitbox.SpawnHitbox("Attack", transform.Find("meleepoint").position);
+
             if (attack.index < attack.max)
             {
-                yield return new WaitForSeconds(.4f);
                 attack.NextAttack();
             }
 
