@@ -42,16 +42,16 @@ public class State : MonoBehaviour
             }
         }
 
-        ChangeState(transform, "Idle");
+        ChangeState("Idle");
     }
 
-    internal void ChangeState(Transform character, string newState)
+    internal void ChangeState(string newState)
     {
-        if (state[character] == newState) { return; }
+        if (state[transform] == newState) { return; }
 
         bool inAnimations = false;
 
-        foreach (string checkState in animations[character])
+        foreach (string checkState in animations[transform])
         {
             if (checkState == newState)
             {
@@ -67,9 +67,9 @@ public class State : MonoBehaviour
         }
         else
         {
-            state[character] = newState;
+            state[transform] = newState;
 
-            PlayAnimation(character);
+            PlayAnimation(transform);
         }
     }
 

@@ -30,7 +30,7 @@ public class PlayerDash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             dashAudioSource.Play();
-            gameObject.GetComponent<Movement>().canmove = false;
+            //gameObject.GetComponent<Movement>().canmove = false;
             StartCoroutine(Dash());
         }
 
@@ -52,7 +52,7 @@ public class PlayerDash : MonoBehaviour
             yield return null;
         }
 
-        gameObject.GetComponent<Movement>().canmove = true;
+        //gameObject.GetComponent<Movement>().canmove = true;
 
 
         // Wait for the dash time

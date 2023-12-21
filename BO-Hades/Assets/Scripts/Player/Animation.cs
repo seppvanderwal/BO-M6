@@ -21,11 +21,11 @@ public class Animation
     {
         if (name != null)
         {
-            state.ChangeState(character, name);
+            state.ChangeState(name);
         }
         else
         {
-            state.ChangeState(character, this.name);
+            state.ChangeState(this.name);
         }
     }
 }
