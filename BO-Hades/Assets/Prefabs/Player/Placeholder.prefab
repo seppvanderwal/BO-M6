@@ -97,6 +97,37 @@ Transform:
   m_Father: {fileID: 1302639894603818119}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1008187163827786147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3806105814303191459}
+  m_Layer: 0
+  m_Name: bulletspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3806105814303191459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008187163827786147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.046, y: 1.1459, z: 0.065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6792478106991100947}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1104097111785963945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1360,7 @@ GameObject:
   - component: {fileID: 6469706346310616692}
   - component: {fileID: 6469706346310616702}
   - component: {fileID: 6469706346310616701}
+  - component: {fileID: 18914426363683111}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -1352,6 +1384,7 @@ Transform:
   - {fileID: 3219494516790971106}
   - {fileID: 1302639894603818119}
   - {fileID: 6469706346350482615}
+  - {fileID: 3806105814303191459}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 227.631, z: 0}
@@ -1564,6 +1597,22 @@ MonoBehaviour:
   dashTime: 0.4
   dashingCooldown: 1
   dashAudioSource: {fileID: 0}
+--- !u!114 &18914426363683111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127264344811167401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7c88ae0473c9041b02edb0468f11ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawnPoint: {fileID: 3806105814303191459}
+  bulletPrefab: {fileID: 6915549119371046337, guid: fe7d7303236bf1d44a0f18e6b30ceee9,
+    type: 3}
+  bulletSpeed: 10
 --- !u!1 &6254377523191430642
 GameObject:
   m_ObjectHideFlags: 0
