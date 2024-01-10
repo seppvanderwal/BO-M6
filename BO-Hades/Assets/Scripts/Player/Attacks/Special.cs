@@ -21,7 +21,6 @@ public class Special : Animation
 
     public bool Firing;
 
-    private State UserState;
     private Audio UserAudio;
 
     public Special(string name, State state, Transform character, KeyCode key) : base(name, state, character)
@@ -34,10 +33,9 @@ public class Special : Animation
 
         this.key = key;
 
-        this.attackTime = 3f;
+        this.attackTime = .8f;
         this.cooldown = 5f;
 
-        UserState = character.GetComponent<State>();
         UserAudio = character.GetComponent<Audio>();
 
         inCooldown = false;
@@ -54,10 +52,16 @@ public class Special : Animation
             Firing = true;
 
             UserAudio.Play(name);
+            playAnimation("SpecialQ");
 
             yield return new WaitForSeconds(attackTime);
 
+            Hitbox.SpawnHitbox("Special", character.Find("meleepoint").position, .6f);
             Firing = false;
+
+            yield return new WaitForSeconds(.25f);
+
+            playAnimation("Idle");
 
             yield return new WaitForSeconds(cooldown);
 

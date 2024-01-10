@@ -199,7 +199,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7364300033282833294}
-    m_Position: {x: 430, y: 290, z: 0}
+    m_Position: {x: 420, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3302803908983182599}
     m_Position: {x: 500, y: 80, z: 0}
@@ -241,6 +241,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Dash
+    m_Type: 1
+    m_DefaultFloat: 1.5
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Special
     m_Type: 1
     m_DefaultFloat: 1.5
     m_DefaultInt: 0
@@ -314,13 +320,14 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 0
+  m_SpeedParameterActive: 1
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: -203655887218126122, guid: b2d8dd96454d9fc46b11b4bbe94e5e86,
+    type: 3}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Special
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
