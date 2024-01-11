@@ -59,7 +59,7 @@ public class BaseAttacks : MonoBehaviour
 
             yield return new WaitForSeconds(.4f);
 
-            Hitbox.SpawnHitbox("Attack", transform.Find("meleepoint").position);
+            Hitbox.SpawnHitbox("Attack", transform.Find("meleepoint").position, .3f);
 
             if (attack.index < attack.max)
             {

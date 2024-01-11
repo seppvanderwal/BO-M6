@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
-    public static void SpawnHitbox(string name, Vector3 meleepoint)
+    public static void SpawnHitbox(string name, Vector3 meleepoint, float lifetime)
     {
         Transform hitbox = Instantiate(Resources.Load<Transform>(@$"Hitboxes/{name}"));
 
@@ -13,7 +13,7 @@ public class Hitbox : MonoBehaviour
 
         hitbox.AddComponent<Hitbox>();
 
-        Destroy(hitbox.gameObject, 1f);
+        Destroy(hitbox.gameObject, lifetime);
     }
 
     private void OnTriggerEnter(Collider collider)
