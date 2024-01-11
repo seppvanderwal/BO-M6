@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderMateriaal
-  m_Shader: {fileID: -6465566751694194690, guid: 9fa377ac15679394dbc6c13808934086,
+  m_Shader: {fileID: -6465566751694194690, guid: 44a231ab323bd7b4890e774b03fe289a,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ec1f26bcade34de9a0a244f7629e4791_Texture_1:
-        m_Texture: {fileID: 2800000, guid: becf83f70e6717a479201cc96588d70d, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb0085d43f3e29b499eb7232639ca739, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
