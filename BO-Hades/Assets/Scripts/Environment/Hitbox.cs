@@ -90,7 +90,6 @@ public class Hitbox : MonoBehaviour
         {
             timer += Time.deltaTime;
             transform.position += direction * Time.deltaTime * castSpeed;
-            Debug.Log($"timer: {timer}, lifetime: {lifetime}");
         }
     }
 }

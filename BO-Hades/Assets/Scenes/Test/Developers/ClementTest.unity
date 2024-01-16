@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Placeholder
       objectReference: {fileID: 0}
+    - target: {fileID: 6127264344811167401, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6469706346310616701, guid: 16364a4f05bb59b458ac59fb99f34165,
         type: 3}
       propertyPath: dashTime
