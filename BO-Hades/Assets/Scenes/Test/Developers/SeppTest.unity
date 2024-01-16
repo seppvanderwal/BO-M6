@@ -130,6 +130,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3734050059161911637, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734050059161911637, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734050059161911637, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734050059161911637, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734050059161911637, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6127264344811167401, guid: 16364a4f05bb59b458ac59fb99f34165,
         type: 3}
       propertyPath: m_Name
