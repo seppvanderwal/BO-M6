@@ -9,8 +9,6 @@ public class State : MonoBehaviour
 
     private Animator animator;
 
-    public Cast cast;
-
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,10 +36,6 @@ public class State : MonoBehaviour
                     KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), lastDigit);
 
                     new Special(state, this, transform, key);
-                }
-                else if (Regex.IsMatch(state, "Cast"))
-                {
-                    cast = new Cast(state, this, transform, KeyCode.E);
                 }
 
                 animations[transform].Add(state);

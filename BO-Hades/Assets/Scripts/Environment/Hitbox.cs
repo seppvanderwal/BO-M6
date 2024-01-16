@@ -3,63 +3,17 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
-    public float castSpeed = 5f;
-
-    internal bool ranged;
-    internal bool removed;
-
-    internal float lifetime;
-    internal float damage;
-    internal float timer;
-
-    internal Vector3 direction;
-
-    internal string type;
-
-    private static void SpawnCrystal(Hitbox hitbox)
-    {
-        if (hitbox.type == "Ranged")
-        {
-            hitbox.removed = true;
-
-            Transform crystal = Instantiate(Resources.Load<Transform>(@"Assets/Cast/Crystal"));
-            crystal.position = hitbox.transform.position;
-            crystal.AddComponent<Crystal>();
-
-            Destroy(hitbox.gameObject);
-        }
-    }
-
-    public static void SpawnHitbox(string name, string type, Transform spawnpoint, float lifetime, float damage)
+    public static void SpawnHitbox(string name, Vector3 meleepoint, float lifetime)
     {
         Transform hitbox = Instantiate(Resources.Load<Transform>(@$"Hitboxes/{name}"));
 
         hitbox.tag = "Attack";
-        hitbox.position = spawnpoint.position;
-        hitbox.LookAt(spawnpoint.forward * 3);
 
-        Hitbox component = hitbox.AddComponent<Hitbox>();
+        hitbox.position = meleepoint;
 
-        component.ranged = false;
-        component.removed = false;
+        hitbox.AddComponent<Hitbox>();
 
-        component.damage = damage;
-        component.lifetime = lifetime;
-        component.timer = 0;
-
-        component.direction = spawnpoint.forward;
-
-        component.type = type;
-
-        if (type == "Melee")
-        {
-            Destroy(hitbox.gameObject, lifetime);
-        }
-        else if (type == "Ranged")
-        {
-            component.ranged = true;
-            component.enabled = true;
-        }
+        Destroy(hitbox.gameObject, lifetime);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -73,24 +27,6 @@ public class Hitbox : MonoBehaviour
             pot.position = new Vector3(pot.position.x, pot.position.y, pot.position.z - 1f);
 
             collider.enabled = false;
-
-            SpawnCrystal(this);
-        }
-    }
-
-    private void Update()
-    {
-        if (!ranged) { return; }
-
-        if (timer >= lifetime && !removed)
-        {
-            SpawnCrystal(this);
-        }
-        else
-        {
-            timer += Time.deltaTime;
-            transform.position += direction * Time.deltaTime * castSpeed;
-            Debug.Log($"timer: {timer}, lifetime: {lifetime}");
         }
     }
 }
