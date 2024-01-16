@@ -52,11 +52,11 @@ public class Special : Animation
             Firing = true;
 
             UserAudio.Play(name);
-            playAnimation(name);
+            playAnimation("SpecialQ");
 
             yield return new WaitForSeconds(attackTime);
 
-            Hitbox.SpawnHitbox("Special", "Melee", character.Find("meleepoint"), .6f, 20);
+            Hitbox.SpawnHitbox("Special", character.Find("meleepoint").position, .6f);
             Firing = false;
 
             yield return new WaitForSeconds(.25f);
