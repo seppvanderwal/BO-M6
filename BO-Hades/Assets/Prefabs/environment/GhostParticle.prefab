@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2049400944360478781}
   - component: {fileID: 1367586511654322470}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: GhostParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4761,7 +4761,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: 4afacd74d3e85294c9af5926282ac2f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
