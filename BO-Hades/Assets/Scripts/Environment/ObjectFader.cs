@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObjectFader : MonoBehaviour
 {
@@ -33,7 +31,7 @@ public class ObjectFader : MonoBehaviour
         Mat.color = smoothColor;
     }
 
-    void ResetFade() 
+    void ResetFade()
     {
         Color currentColor = Mat.color;
         Color smoothColor = new Color(currentColor.r, currentColor.g, currentColor.b, Mathf.Lerp(currentColor.a, originalOpacity, fadeSpeed * Time.deltaTime));
