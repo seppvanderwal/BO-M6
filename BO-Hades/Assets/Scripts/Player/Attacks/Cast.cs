@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Special : Animation
+public class Cast : Animation
 {
     internal static Dictionary<Transform, bool> inSpecial = new();
 
@@ -15,15 +15,12 @@ public class Special : Animation
     internal KeyCode key;
 
     internal float attackTime;
-    internal float cooldown;
 
-    public bool inCooldown;
-
-    public bool Firing;
+    internal bool cooldown;
 
     private Audio UserAudio;
 
-    public Special(string name, State state, Transform character, KeyCode key) : base(name, state, character)
+    public Cast(string name, State state, Transform character, KeyCode key) : base(name, state, character)
     {
         this.name = name;
 
@@ -33,39 +30,41 @@ public class Special : Animation
 
         this.key = key;
 
-        this.attackTime = .8f;
-        this.cooldown = 5f;
+        this.cooldown = false;
+
+        this.attackTime = .5f;
 
         UserAudio = character.GetComponent<Audio>();
 
-        inCooldown = false;
-        Firing = false;
-
-        BaseAttacks.Specials.Add(this);
+        BaseAttacks.CurrentCast = this;
     }
 
     public IEnumerator Fire()
     {
-        if (!Firing && !inCooldown)
+        if (!cooldown)
         {
-            inCooldown = true;
-            Firing = true;
+            cooldown = true;
 
             UserAudio.Play(name);
             playAnimation(name);
 
             yield return new WaitForSeconds(attackTime);
 
-            Hitbox.SpawnHitbox("Special", "Melee", character, character.Find("meleepoint"), .6f, 20);
-            Firing = false;
+            Hitbox.SpawnHitbox("Cast", "Ranged", character, character.Find("meleepoint"), 1.2f, 30);
 
             yield return new WaitForSeconds(.25f);
 
             playAnimation("Idle");
-
-            yield return new WaitForSeconds(cooldown);
-
-            inCooldown = false;
         }
     }
+
+    // Update is called once per frame
+    /*
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Hitbox.SpawnHitbox("Cast", "Ranged");
+        }
+    }*/
 }
