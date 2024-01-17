@@ -44,7 +44,8 @@ public class Hitbox : MonoBehaviour
 
         hitbox.tag = "Attack";
         hitbox.position = spawnpoint.position;
-        hitbox.LookAt(spawnpoint.forward * 3);
+        hitbox.LookAt(spawnpoint.forward * 100);
+        hitbox.Rotate(new(0, 180, 0));
 
         Hitbox component = hitbox.AddComponent<Hitbox>();
 

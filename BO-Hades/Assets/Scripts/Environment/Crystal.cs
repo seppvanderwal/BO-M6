@@ -2,27 +2,24 @@
 
 public class Crystal : MonoBehaviour
 {
-    public float lifetime = 1;
-
-    public float height = .2f;
-    public float speed = 2;
-    public float moveSpeed = 30;
-    public float increment = 0.05f;
-    public float distance = 3f;
+    [SerializeField] private float height = .2f;
+    [SerializeField] private float floatSpeed = 2;
+    [SerializeField] private float moveSpeed = 5;
+    [SerializeField] private float floatIncrement = 0.05f;
+    [SerializeField] private float distance = 3f;
 
     internal Transform character;
 
     private Vector3 originalPos;
 
     private bool idle = true;
-
     private float currentIncrement;
 
     private void Start()
     {
         originalPos = transform.position;
 
-        currentIncrement = increment;
+        currentIncrement = floatIncrement;
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -33,6 +30,8 @@ public class Crystal : MonoBehaviour
 
             State state = character.GetComponent<State>();
             state.cast.cooldown = false;
+
+            Destroy(gameObject);
         }
     }
 
@@ -41,34 +40,28 @@ public class Crystal : MonoBehaviour
     {
         if (!idle)
         {
-            /*
-            if (timer >= lifetime)
-            {
-                Destroy(gameObject);
-            }*/
-
-            transform.LookAt(character.position);
-            transform.position += transform.forward * Time.deltaTime * speed;
+            transform.LookAt(character.position + new Vector3(0, .6f, 0));
+            transform.position += moveSpeed * Time.deltaTime * transform.forward;
         }
         else
         {
             if (transform.position.y >= originalPos.y + height)
             {
-                currentIncrement = -increment;
+                currentIncrement = -floatIncrement;
             }
             else if (transform.position.y <= originalPos.y - height)
             {
-                currentIncrement = increment;
+                currentIncrement = floatIncrement;
             }
 
-            transform.position += new Vector3(0, currentIncrement * speed * Time.deltaTime, 0);
-        }
+            transform.position += new Vector3(0, currentIncrement * floatSpeed * Time.deltaTime, 0);
 
-        float dis = Vector3.Distance(character.position, originalPos);
+            float dis = Vector3.Distance(character.position, originalPos);
 
-        if (dis <= distance)
-        {
-            idle = false;
+            if (dis <= distance)
+            {
+                idle = false;
+            }
         }
     }
 }
