@@ -14,6 +14,8 @@ public class Hitbox : MonoBehaviour
 
     internal Vector3 direction;
 
+    internal Transform character;
+
     internal string type;
 
     private static void SpawnCrystal(Hitbox hitbox)
@@ -24,13 +26,19 @@ public class Hitbox : MonoBehaviour
 
             Transform crystal = Instantiate(Resources.Load<Transform>(@"Assets/Cast/Crystal"));
             crystal.position = hitbox.transform.position;
+
+            Crystal crystalComponent = crystal.GetComponent<Crystal>();
+            crystalComponent.character = hitbox.character;
+
+            /*
             crystal.AddComponent<Crystal>();
+            */
 
             Destroy(hitbox.gameObject);
         }
     }
 
-    public static void SpawnHitbox(string name, string type, Transform spawnpoint, float lifetime, float damage)
+    public static void SpawnHitbox(string name, string type, Transform character, Transform spawnpoint, float lifetime, float damage)
     {
         Transform hitbox = Instantiate(Resources.Load<Transform>(@$"Hitboxes/{name}"));
 
@@ -50,6 +58,11 @@ public class Hitbox : MonoBehaviour
         component.direction = spawnpoint.forward;
 
         component.type = type;
+
+        if (character)
+        {
+            component.character = character;
+        }
 
         if (type == "Melee")
         {

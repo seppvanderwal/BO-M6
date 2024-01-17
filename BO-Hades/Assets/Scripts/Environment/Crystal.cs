@@ -8,15 +8,15 @@ public class Crystal : MonoBehaviour
     public float speed = 2;
     public float moveSpeed = 30;
     public float increment = 0.05f;
+    public float distance = 3f;
+
+    internal Transform character;
 
     private Vector3 originalPos;
 
     private bool idle = true;
 
     private float currentIncrement;
-    private float timer = 0;
-
-    private Transform character;
 
     private void Start()
     {
@@ -24,7 +24,6 @@ public class Crystal : MonoBehaviour
 
         currentIncrement = increment;
     }
-
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
@@ -42,14 +41,14 @@ public class Crystal : MonoBehaviour
     {
         if (!idle)
         {
+            /*
             if (timer >= lifetime)
             {
                 Destroy(gameObject);
-            }
+            }*/
 
-            timer += Time.deltaTime;
-
-            transform.localScale -= new Vector3(1.5f, 1.5f, 1.5f) * Time.deltaTime * moveSpeed;
+            transform.LookAt(character.position);
+            transform.position += transform.forward * Time.deltaTime * speed;
         }
         else
         {
@@ -65,10 +64,11 @@ public class Crystal : MonoBehaviour
             transform.position += new Vector3(0, currentIncrement * speed * Time.deltaTime, 0);
         }
 
-        /*
-        if (Vector3.Distance(character.position, originalPos) <= distance)
+        float dis = Vector3.Distance(character.position, originalPos);
+
+        if (dis <= distance)
         {
             idle = false;
-        }*/
+        }
     }
 }

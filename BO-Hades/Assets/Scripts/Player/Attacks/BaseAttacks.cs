@@ -26,7 +26,7 @@ public class BaseAttacks : MonoBehaviour
             {"Attack1", 1},
             {"Attack2", 1},
             {"Attack3", 2},
-            {"Cast", 0}
+            {"Cast", 4}
         });
     }
 
@@ -66,7 +66,7 @@ public class BaseAttacks : MonoBehaviour
 
             yield return new WaitForSeconds(.4f);
 
-            Hitbox.SpawnHitbox("Attack", "Melee", transform.Find("meleepoint"), .3f, 20);
+            Hitbox.SpawnHitbox("Attack", "Melee", transform, transform.Find("meleepoint"), .3f, 20);
 
             if (attack.index < attack.max)
             {

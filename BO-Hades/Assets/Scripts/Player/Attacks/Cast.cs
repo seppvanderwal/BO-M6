@@ -50,7 +50,7 @@ public class Cast : Animation
 
             yield return new WaitForSeconds(attackTime);
 
-            Hitbox.SpawnHitbox("Cast", "Ranged", character.Find("meleepoint"), 1.2f, 30);
+            Hitbox.SpawnHitbox("Cast", "Ranged", character, character.Find("meleepoint"), 1.2f, 30);
 
             yield return new WaitForSeconds(.25f);
 

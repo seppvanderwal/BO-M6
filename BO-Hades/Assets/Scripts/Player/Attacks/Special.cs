@@ -56,7 +56,7 @@ public class Special : Animation
 
             yield return new WaitForSeconds(attackTime);
 
-            Hitbox.SpawnHitbox("Special", "Melee", character.Find("meleepoint"), .6f, 20);
+            Hitbox.SpawnHitbox("Special", "Melee", character, character.Find("meleepoint"), .6f, 20);
             Firing = false;
 
             yield return new WaitForSeconds(.25f);
