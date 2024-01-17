@@ -12,7 +12,6 @@ public class GhostFade : MonoBehaviour
     internal IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(1f);
-        Debug.Log("test");
         _fader.DoFade = false;
     }
 
