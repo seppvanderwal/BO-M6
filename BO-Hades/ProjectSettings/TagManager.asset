@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Attack
   - Pot
+  - Ghost
+  - Spook
   layers:
   - Default
   - TransparentFX
