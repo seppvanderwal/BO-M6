@@ -3,20 +3,78 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+    public float castSpeed = 5f;
     public GhostHit Ghosthit;
+    internal bool ranged;
+    internal bool removed;
 
-    public static void SpawnHitbox(string name, Vector3 meleepoint, float lifetime)
+    internal float lifetime;
+    internal float damage;
+    internal float timer;
+
+    internal Vector3 direction;
+
+    internal Transform character;
+
+    internal string type;
+
+    private static void SpawnCrystal(Hitbox hitbox)
+    {
+        if (hitbox.type == "Ranged")
+        {
+            hitbox.removed = true;
+
+            Transform crystal = Instantiate(Resources.Load<Transform>(@"Assets/Cast/Crystal"));
+            crystal.position = hitbox.transform.position;
+
+            Crystal crystalComponent = crystal.GetComponent<Crystal>();
+            crystalComponent.character = hitbox.character;
+
+            /*
+            crystal.AddComponent<Crystal>();
+            */
+
+            Destroy(hitbox.gameObject);
+        }
+    }
+
+
+    public static void SpawnHitbox(string name, string type, Transform character, Transform spawnpoint, float lifetime, float damage)
     {
         Transform hitbox = Instantiate(Resources.Load<Transform>(@$"Hitboxes/{name}"));
 
         hitbox.tag = "Attack";
+        hitbox.position = spawnpoint.position;
+        hitbox.LookAt(spawnpoint.forward * 100);
+        hitbox.Rotate(new(0, 180, 0));
 
-        hitbox.position = meleepoint;
+        Hitbox component = hitbox.AddComponent<Hitbox>();
 
-        hitbox.AddComponent<Hitbox>();
+        component.ranged = false;
+        component.removed = false;
 
-        Destroy(hitbox.gameObject, lifetime);
+        component.damage = damage;
+        component.lifetime = lifetime;
+        component.timer = 0;
 
+        component.direction = spawnpoint.forward;
+
+        component.type = type;
+
+        if (character)
+        {
+            component.character = character;
+        }
+
+        if (type == "Melee")
+        {
+            Destroy(hitbox.gameObject, lifetime);
+        }
+        else if (type == "Ranged")
+        {
+            component.ranged = true;
+            component.enabled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider collider)

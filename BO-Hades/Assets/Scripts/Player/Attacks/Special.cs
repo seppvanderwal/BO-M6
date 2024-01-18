@@ -34,7 +34,7 @@ public class Special : Animation
         this.key = key;
 
         this.attackTime = .8f;
-        this.cooldown = 5f;
+        this.cooldown = 1.1f;
 
         UserAudio = character.GetComponent<Audio>();
 
