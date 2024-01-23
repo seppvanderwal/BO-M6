@@ -5,6 +5,7 @@ public class Hitbox : MonoBehaviour
 {
     public float castSpeed = 5f;
     public GhostHit Ghosthit;
+
     internal bool ranged;
     internal bool removed;
 
@@ -26,6 +27,7 @@ public class Hitbox : MonoBehaviour
 
             Transform crystal = Instantiate(Resources.Load<Transform>(@"Assets/Cast/Crystal"));
             crystal.position = hitbox.transform.position;
+            crystal.tag = "Crystal";
 
             Crystal crystalComponent = crystal.GetComponent<Crystal>();
             crystalComponent.character = hitbox.character;

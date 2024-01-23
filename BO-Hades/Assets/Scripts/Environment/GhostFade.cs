@@ -4,16 +4,17 @@ using UnityEngine;
 public class GhostFade : MonoBehaviour
 {
     private ObjectFader _fader;
-
-    void Start()
-    {
-        _fader = gameObject.GetComponent<ObjectFader>();
-    }
     internal IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(1f);
         _fader.DoFade = false;
     }
+
+    void Start()
+    {
+        _fader = gameObject.GetComponent<ObjectFader>();
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,12 +32,5 @@ public class GhostFade : MonoBehaviour
             StartCoroutine(FadeOut());
 
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
