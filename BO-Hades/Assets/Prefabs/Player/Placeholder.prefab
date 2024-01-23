@@ -1534,9 +1534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combo:
-  - 0.5
-  - 1
-  - 1
+  - 0.2
+  - 0.2
+  - 0.4
 --- !u!114 &6469706346310616702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 10
   dashTime: 0.4
-  dashingCooldown: 1
+  dashingCooldown: 0.2
   dashAudioSource: {fileID: 0}
 --- !u!1 &6254377523191430642
 GameObject:

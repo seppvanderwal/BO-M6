@@ -79,7 +79,11 @@ public class Hitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.tag);
+        if (collider.CompareTag("Player"))
+        {
+            return;
+        }
+
         if (collider.CompareTag("Pot"))
         {
             Debug.Log(collider);
@@ -90,12 +94,14 @@ public class Hitbox : MonoBehaviour
             pot.position = new Vector3(pot.position.x, pot.position.y, pot.position.z - 1f);
 
             collider.enabled = false;
+            SpawnCrystal(this);
         }
-        if (collider.CompareTag("Ghost"))
+        else if (collider.CompareTag("Ghost"))
         {
             GhostHit Ghosthit = collider.GetComponent<GhostHit>();
             Ghosthit.hit = true;
 
+            SpawnCrystal(this);
         }
     }
     private void Update()
