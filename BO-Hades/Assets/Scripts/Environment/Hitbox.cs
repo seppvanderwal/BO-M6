@@ -98,4 +98,19 @@ public class Hitbox : MonoBehaviour
 
         }
     }
+    private void Update()
+    {
+        if (!ranged) { return; }
+
+        if (timer >= lifetime && !removed)
+        {
+            SpawnCrystal(this);
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            transform.position += direction * Time.deltaTime * castSpeed;
+        }
+    }
 }
+
