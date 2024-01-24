@@ -5673,6 +5673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742860693}
   - component: {fileID: 742860694}
+  - component: {fileID: 742860695}
   m_Layer: 0
   m_Name: StatueHades_BuffMan (2)
   m_TagString: Untagged
@@ -5747,6 +5748,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &742860695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742860692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f042bee6daaa0834d8344862d47ab1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLayers: []
+  parallaxStrength: 0.1
 --- !u!1001 &769645419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6278,7 +6293,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1662207512}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: -40
     FarClipPlane: 100
     Dutch: 0
@@ -6803,6 +6818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033721454}
   - component: {fileID: 1033721455}
+  - component: {fileID: 1033721456}
   m_Layer: 0
   m_Name: StatueHades_BuffMan (4)
   m_TagString: Untagged
@@ -6877,6 +6893,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1033721456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033721453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f042bee6daaa0834d8344862d47ab1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLayers: []
+  parallaxStrength: 0.1
 --- !u!1 &1051767048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,7 +6919,6 @@ GameObject:
   - component: {fileID: 1051767052}
   - component: {fileID: 1051767051}
   - component: {fileID: 1051767050}
-  - component: {fileID: 1051767054}
   - component: {fileID: 1051767049}
   m_Layer: 0
   m_Name: Main Camera (1)
@@ -7000,7 +7029,7 @@ Camera:
   far clip plane: 100
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7031,18 +7060,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 30, y: 45.142, z: -0.066}
---- !u!114 &1051767054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051767048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947401a92c16a4c4281c0ff11a4a2e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1057345858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8734,11 +8751,161 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471420666697542779, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 471420666697542779, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296932833819629517, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296932833819629517, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1538137295586310287, guid: 66e077b63408da04b8f5c700da878843,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e9c8b3ed9d311fe429236bfb8d4a82f0, type: 2}
+    - target: {fileID: 1881676600255329503, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881676600255329503, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338985896269519559, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338985896269519559, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886726973651195980, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886726973651195980, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930053087899597336, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930053087899597336, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716346581507228507, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716346581507228507, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300373102528418462, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300373102528418462, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568752610725278517, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568752610725278517, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645252752368731311, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645252752368731311, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349530412958828295, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349530412958828295, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432175733664487516, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432175733664487516, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695415512765095275, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695415512765095275, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921015076167687000, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921015076167687000, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961700614788203408, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961700614788203408, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6969594581958845749, guid: 66e077b63408da04b8f5c700da878843,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8864,6 +9031,76 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e9c8b3ed9d311fe429236bfb8d4a82f0, type: 2}
+    - target: {fileID: 7074521847106678414, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074521847106678414, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250162205389292854, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250162205389292854, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740704237524271811, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740704237524271811, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081328900402377969, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081328900402377969, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210460771559160609, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210460771559160609, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421186111126249816, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421186111126249816, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603554123675263115, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603554123675263115, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8609031979995225764, guid: 66e077b63408da04b8f5c700da878843,
         type: 3}
       propertyPath: m_Name
@@ -8923,6 +9160,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666423409142650520, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666423409142650520, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729976515573074409, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729976515573074409, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736193311821701906, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736193311821701906, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: fadeAmmount
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e077b63408da04b8f5c700da878843, type: 3}
@@ -9862,6 +10129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758672076}
   - component: {fileID: 1758672077}
+  - component: {fileID: 1758672078}
   m_Layer: 0
   m_Name: StatueHades_BuffMan (3)
   m_TagString: Untagged
@@ -9936,6 +10204,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1758672078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758672075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f042bee6daaa0834d8344862d47ab1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLayers: []
+  parallaxStrength: 0.1
 --- !u!1001 &1761121375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11233,6 +11515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060805499}
   - component: {fileID: 2060805500}
+  - component: {fileID: 2060805501}
   m_Layer: 0
   m_Name: StatueHades_BuffMan (5)
   m_TagString: Untagged
@@ -11307,6 +11590,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2060805501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060805498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f042bee6daaa0834d8344862d47ab1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLayers: []
+  parallaxStrength: 0.1
 --- !u!1001 &2089300000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11507,6 +11804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112387540}
   - component: {fileID: 2112387541}
+  - component: {fileID: 2112387542}
   m_Layer: 0
   m_Name: StatueHades_BuffMan (1)
   m_TagString: Untagged
@@ -11581,3 +11879,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2112387542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112387539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f042bee6daaa0834d8344862d47ab1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundLayers: []
+  parallaxStrength: 0.1
