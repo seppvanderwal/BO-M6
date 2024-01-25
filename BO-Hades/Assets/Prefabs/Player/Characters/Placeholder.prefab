@@ -1534,9 +1534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combo:
-  - 0.5
-  - 1
-  - 1
+  - 0.2
+  - 0.2
+  - 0.4
 --- !u!114 &6469706346310616702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012d52053a5478545928f3632ba9d267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   turnSmoothTime: 0.1
 --- !u!114 &6469706346310616701
 MonoBehaviour:
@@ -1563,9 +1563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04bccb3d18e40c47b5c456774428e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 10
-  dashTime: 0.4
-  dashingCooldown: 1
+  dashSpeed: 17
+  dashTime: 0.3
+  dashingCooldown: 0.3
   dashAudioSource: {fileID: 0}
 --- !u!1 &6254377523191430642
 GameObject:

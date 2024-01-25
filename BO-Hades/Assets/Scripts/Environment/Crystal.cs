@@ -6,7 +6,7 @@ public class Crystal : MonoBehaviour
     [SerializeField] private float floatSpeed = 2;
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private float floatIncrement = 0.05f;
-    [SerializeField] private float distance = 3f;
+    [SerializeField] private float distance = 2f;
 
     internal Transform character;
 
@@ -40,7 +40,7 @@ public class Crystal : MonoBehaviour
     {
         if (!idle)
         {
-            transform.LookAt(character.position + new Vector3(0, .6f, 0));
+            transform.LookAt(character.position + new Vector3(0, .7f, 0));
             transform.position += moveSpeed * Time.deltaTime * transform.forward;
         }
         else

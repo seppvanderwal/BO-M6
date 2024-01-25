@@ -70,9 +70,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 0.2
   floatSpeed: 2
-  moveSpeed: 5
+  moveSpeed: 4
   floatIncrement: 0.05
-  distance: 2.5
+  distance: 2
 --- !u!1001 &4061207925144785178
 PrefabInstance:
   m_ObjectHideFlags: 0

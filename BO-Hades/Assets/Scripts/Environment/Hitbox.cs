@@ -4,7 +4,7 @@ using UnityEngine;
 public class Hitbox : MonoBehaviour
 {
     public float castSpeed = 5f;
-
+    public GhostHit Ghosthit;
     internal bool ranged;
     internal bool removed;
 
@@ -37,6 +37,7 @@ public class Hitbox : MonoBehaviour
             Destroy(hitbox.gameObject);
         }
     }
+
 
     public static void SpawnHitbox(string name, string type, Transform character, Transform spawnpoint, float lifetime, float damage)
     {
@@ -78,8 +79,14 @@ public class Hitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        if (collider.CompareTag("Player"))
+        {
+            return;
+        }
+
         if (collider.CompareTag("Pot"))
         {
+            Debug.Log(collider);
             Transform pot = collider.transform;
             Animator potAnimator = collider.GetComponent<Animator>();
 
@@ -87,11 +94,16 @@ public class Hitbox : MonoBehaviour
             pot.position = new Vector3(pot.position.x, pot.position.y, pot.position.z - 1f);
 
             collider.enabled = false;
+            SpawnCrystal(this);
+        }
+        else if (collider.CompareTag("Ghost"))
+        {
+            GhostHit Ghosthit = collider.GetComponent<GhostHit>();
+            Ghosthit.hit = true;
 
             SpawnCrystal(this);
         }
     }
-
     private void Update()
     {
         if (!ranged) { return; }
@@ -107,3 +119,4 @@ public class Hitbox : MonoBehaviour
         }
     }
 }
+
