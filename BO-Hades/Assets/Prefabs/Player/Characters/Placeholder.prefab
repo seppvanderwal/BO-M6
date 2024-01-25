@@ -1329,6 +1329,7 @@ GameObject:
   - component: {fileID: 6469706346310616692}
   - component: {fileID: 6469706346310616702}
   - component: {fileID: 6469706346310616701}
+  - component: {fileID: 5543097086360487568}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Player
@@ -1567,6 +1568,19 @@ MonoBehaviour:
   dashTime: 0.3
   dashingCooldown: 0.3
   dashAudioSource: {fileID: 0}
+--- !u!114 &5543097086360487568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127264344811167401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da2104874307c14e81ffcfa4ed09608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castUI: {fileID: 0}
 --- !u!1 &6254377523191430642
 GameObject:
   m_ObjectHideFlags: 0

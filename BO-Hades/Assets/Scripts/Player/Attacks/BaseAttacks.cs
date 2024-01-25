@@ -14,7 +14,42 @@ public class BaseAttacks : MonoBehaviour
 
     private State UserStates;
     private Audio UserAudio;
+    private IEnumerator Fire()
+    {
+        Attack attack = CurrentAttack;
 
+        if (attack.canAttack)
+        {
+            attack.canAttack = false;
+
+            attack.playAnimation(null);
+            UserAudio.Play(attack.name);
+
+            yield return new WaitForSeconds(.4f);
+
+            Hitbox.SpawnHitbox("Attack", "Melee", transform, transform.Find("meleepoint"), .3f, 20);
+
+            if (attack.index < attack.max)
+            {
+                attack.NextAttack();
+            }
+
+            yield return new WaitForSeconds(attack.cooldown);
+
+            if (CurrentAttack.canAttack && (attack.index + 1) == CurrentAttack.index)
+            {
+                attack.resetCombo();
+            }
+
+            if (attack.index == attack.max)
+            {
+                if (attack == CurrentAttack)
+                {
+                    attack.NextAttack();
+                }
+            }
+        }
+    }
     private void Start()
     {
         UserStates = GetComponent<State>();
@@ -53,40 +88,5 @@ public class BaseAttacks : MonoBehaviour
         }
     }
 
-    private IEnumerator Fire()
-    {
-        Attack attack = CurrentAttack;
 
-        if (attack.canAttack)
-        {
-            attack.canAttack = false;
-
-            attack.playAnimation(null);
-            UserAudio.Play(attack.name);
-
-            yield return new WaitForSeconds(.4f);
-
-            Hitbox.SpawnHitbox("Attack", "Melee", transform, transform.Find("meleepoint"), .3f, 20);
-
-            if (attack.index < attack.max)
-            {
-                attack.NextAttack();
-            }
-
-            yield return new WaitForSeconds(attack.cooldown);
-
-            if (CurrentAttack.canAttack && (attack.index + 1) == CurrentAttack.index)
-            {
-                attack.resetCombo();
-            }
-
-            if (attack.index == attack.max)
-            {
-                if (attack == CurrentAttack)
-                {
-                    attack.NextAttack();
-                }
-            }
-        }
-    }
 }
