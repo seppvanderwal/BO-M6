@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
     public static int hp;
     void Start()
     {
-
         hp = 50;
     }
     private void Update()
