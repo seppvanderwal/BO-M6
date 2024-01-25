@@ -9,17 +9,25 @@ public class Dash : MonoBehaviour
 
     bool inCooldown = false;
 
-    public AudioSource dashAudioSource;
-
     private CharacterController Controller;
-
     private State UserStates;
+    private Audio UserAudio;
+
+    private GameObject dashParticle;
 
     // Start is called before the first frame update
     void Start()
     {
-        UserStates = GetComponent<State>();
         Controller = GetComponent<CharacterController>();
+        UserStates = GetComponent<State>();
+        UserAudio = GetComponent<Audio>();
+
+        UserAudio.SetSounds(new()
+        {
+            {"Dashing", 5},
+        });
+
+        dashParticle = transform.Find("DashParticle").gameObject;
     }
 
     // Update is called once per frame
@@ -45,13 +53,23 @@ public class Dash : MonoBehaviour
 
             float startTime = Time.time;
 
+            UserAudio.Play("Dashing");
             UserStates.ChangeState("Dashing");
+
+            dashParticle.SetActive(true);
+            dashParticle.GetComponent<ParticleSystem>().Play();
 
             while (Time.time < startTime + dashTime)
             {
                 // Calculate movement during the dash directly in this script
                 Vector3 dashDirection = transform.forward;
                 Controller.Move(dashDirection * dashSpeed * Time.deltaTime);
+
+                if (Time.time >= startTime + dashTime / 1.3)
+                {
+                    dashParticle.GetComponent<ParticleSystem>().Stop();
+                }
+
 
                 yield return null;
             }
