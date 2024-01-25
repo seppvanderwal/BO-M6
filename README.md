@@ -21,6 +21,7 @@
   
 -	Leerdoel 8: Je  kunt werk  realiseren en op leveren volgens  een DoD
 -	![Schermafbeelding 2024-01-25 115026](https://github.com/seppvanderwal/BO-M6/assets/115462418/4427b4cb-830c-40b5-bb8b-1db9cce47338)
+-	
   [Hier de link naar Openbare Trello](https://trello.com/b/mBzgiraF/vertical-slice)
 
   
