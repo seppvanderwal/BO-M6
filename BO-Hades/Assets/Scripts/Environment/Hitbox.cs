@@ -3,17 +3,14 @@ using UnityEngine;
 
 public class Hitbox : MonoBehaviour
 {
+    public float castSpeed = 5f;
     public GhostHit Ghosthit;
-    public float castSpeed = 8f;
-
     internal bool ranged;
     internal bool removed;
 
     internal float lifetime;
     internal float damage;
     internal float timer;
-
-    internal ParticleSystem particle;
 
     internal Vector3 direction;
 
@@ -38,7 +35,6 @@ public class Hitbox : MonoBehaviour
             */
 
             Destroy(hitbox.gameObject);
-            Destroy(hitbox.particle.gameObject);
         }
     }
 
@@ -78,12 +74,6 @@ public class Hitbox : MonoBehaviour
         {
             component.ranged = true;
             component.enabled = true;
-
-            ParticleSystem particle = component.transform.Find("Particle").GetComponent<ParticleSystem>();
-            particle.Play();
-            particle.transform.SetParent(Camera.main.transform);
-
-            component.particle = particle;
         }
     }
 
@@ -114,7 +104,6 @@ public class Hitbox : MonoBehaviour
             SpawnCrystal(this);
         }
     }
-
     private void Update()
     {
         if (!ranged) { return; }
@@ -127,11 +116,6 @@ public class Hitbox : MonoBehaviour
         {
             timer += Time.deltaTime;
             transform.position += direction * Time.deltaTime * castSpeed;
-            transform.Rotate(0, 0, 10f);
-
-            particle.transform.position = transform.position; //+ transform.forward * -1.2f;
-            particle.transform.rotation = transform.rotation;
-            //particle.transform.Rotate(0f, 180f, 0f);
         }
     }
 }
