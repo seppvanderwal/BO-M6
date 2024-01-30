@@ -3,6 +3,7 @@
 
 # Computational thinking 
 -	Leerdoel 1:  Je  begrijpt OOP en  schrijft  leesbare  code die voldoet  aan code  conventies.
+-	[Hier link naar de wiki](https://github.com/seppvanderwal/BO-M6/wiki)
   
 # Development
 -	Leerdoel 2: je leert professionele  games te analyseren en weet de  development hiervan te  destilleren en bent in staat om  dit te reproduceren voor je eigen games. Daarnaast weet je je  game op mechanics niveau leuk  te maken.
