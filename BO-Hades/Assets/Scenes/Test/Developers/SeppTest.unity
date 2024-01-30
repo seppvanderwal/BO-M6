@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1881676600255329503, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: DoFade
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8609031979995225764, guid: 66e077b63408da04b8f5c700da878843,
         type: 3}
       propertyPath: m_Name
