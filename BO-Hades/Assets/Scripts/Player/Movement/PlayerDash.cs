@@ -12,30 +12,6 @@ public class PlayerDash : MonoBehaviour
     public float dashingCooldown = 1f;
     public AudioSource dashAudioSource;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isDashing)
-        {
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            dashAudioSource.Play();
-            //gameObject.GetComponent<Movement>().canmove = false;
-            StartCoroutine(Dash());
-        }
-
-    }
-
     IEnumerator Dash()
     {
         canDash = false;
@@ -68,6 +44,30 @@ public class PlayerDash : MonoBehaviour
 
         yield break;
     }
+    // Start is called before the first frame update
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            dashAudioSource.Play();
+            //gameObject.GetComponent<Movement>().canmove = false;
+            StartCoroutine(Dash());
+        }
+
+    }
+
+
 
     Vector3 GetInputDirection()
     {

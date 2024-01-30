@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1881676600255329503, guid: 66e077b63408da04b8f5c700da878843,
+        type: 3}
+      propertyPath: DoFade
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8609031979995225764, guid: 66e077b63408da04b8f5c700da878843,
         type: 3}
       propertyPath: m_Name
@@ -224,6 +229,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5543097086360487568, guid: 16364a4f05bb59b458ac59fb99f34165,
+        type: 3}
+      propertyPath: castUI
+      value: 
+      objectReference: {fileID: 1851980090}
     - target: {fileID: 6127264344811167401, guid: 16364a4f05bb59b458ac59fb99f34165,
         type: 3}
       propertyPath: m_Name
@@ -622,6 +632,18 @@ PrefabInstance:
       objectReference: {fileID: 2137721117}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e9a09305b7e09b459929f7b8d8ba3a0, type: 3}
+--- !u!114 &1851980090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 313089968285687043, guid: 4cd7bd5a90717fa4bbf9b7f87e93cb67,
+    type: 3}
+  m_PrefabInstance: {fileID: 1272831640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb9d45bb52b2eb499e1e390bf76de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2137721117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6792478106991100947, guid: 16364a4f05bb59b458ac59fb99f34165,
