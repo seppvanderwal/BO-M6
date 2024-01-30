@@ -10,11 +10,13 @@
 ![Isometrische_projectie_01](https://github.com/seppvanderwal/BO-M6/assets/115462418/42ba7c31-f89d-4d6e-9f75-0b5d25b6a19d)
 - Voor leerdoel 2 hebben wij als technishe uitdaging de perspective Hades uitgekozen.
   
-###	Leerdoel 3: je leert omgaan met adobe pakketten als  photoshop, en kunt deze  basis gebruiken voor o.a.  vormgeven van visuele  sheets en/of texture
+###	Leerdoel 3: je leert omgaan met adobe pakketten als  photoshop, en kunt deze  basis gebruiken voor o.a.  vormgeven van visuele  sheets en/of texture.
+![VisualSheetMovementHades](https://github.com/seppvanderwal/BO-M6/assets/115462418/4156cb91-3cdc-442c-ae99-a8a96594bd62)
+
 
 # Design & documentation 
 ###	Leerdoel 4: Je kunt jouw en  andermans  geprogrammeerde game  mechanics naar een  volgend niveau tillen, door  deze aan te passen met  oog op visuele polish,  game-feel en playability.
-Eerste hebben wij de filmpjes doorgenomen die in de presentatie gelinkt waren, stap twee was allemaal de game kort spelen met als doel om te focussen op de gamefeel en visuele polish.
+- Eerste hebben wij de filmpjes doorgenomen die in de presentatie gelinkt waren, stap twee was allemaal de game kort spelen met als doel om te focussen op de gamefeel en visuele polish.
   
 ###	Leerdoel 5: Je kunt  de structuur van je  toekomstige code  van te voren in kaart brengen met behulp van een class  diagram.
 ![BO-Hades-Class-Diagram](https://github.com/seppvanderwal/BO-M6/assets/115462418/709c1779-f3bc-44c9-aa58-c10eff3ab666)
