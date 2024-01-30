@@ -30,5 +30,5 @@ Eerste hebben wij de filmpjes doorgenomen die in de presentatie gelinkt waren, s
 
   
 ###	Leerdoel 9: Je gaat  pull requests maken om code samen te laten voegen vanuit  verschillende  branches. 
-![pull request](https://github.com/seppvanderwal/BO-M6/assets/115462418/b8bb86a9-bbba-486a-9682-43b0638e38e2)
+![pull request](https://github.com/seppvanderwal/BO-M6/assets/115462418/a5d7622d-6682-46c5-b6a6-4c6f125f25e8)
 
