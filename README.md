@@ -1,8 +1,8 @@
 # BO-M6
 # Leerdoelen Vertical Slice
 
-## Computational thinking 
--	Leerdoel 1:  Je  begrijpt OOP en  schrijft  leesbare  code die voldoet  aan code  conventies.
+# Computational thinking 
+**  Leerdoel 1:  Je  begrijpt OOP en  schrijft  leesbare  code die voldoet  aan code  conventies.
 -	[Hier link naar de wiki](https://github.com/seppvanderwal/BO-M6/wiki)
   
 # Development
