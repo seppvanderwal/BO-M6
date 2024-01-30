@@ -14,6 +14,7 @@ Voor leerdoel 2 hebben wij als technishe uitdaging de perspective Hades uitgekoz
 
 # Design & documentation 
 ###	Leerdoel 4: Je kunt jouw en  andermans  geprogrammeerde game  mechanics naar een  volgend niveau tillen, door  deze aan te passen met  oog op visuele polish,  game-feel en playability.
+Eerste hebben wij de filmpjes doorgenomen die in de presentatie gelinkt waren, stap twee was allemaal de game kort spelen met als doel om te focussen op de gamefeel en visuele polish.
   
 ###	Leerdoel 5: Je kunt  de structuur van je  toekomstige code  van te voren in kaart brengen met behulp van een class  diagram.
   
