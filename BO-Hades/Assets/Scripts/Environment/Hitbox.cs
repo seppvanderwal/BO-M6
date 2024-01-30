@@ -32,10 +32,6 @@ public class Hitbox : MonoBehaviour
             Crystal crystalComponent = crystal.GetComponent<Crystal>();
             crystalComponent.character = hitbox.character;
 
-            /*
-            crystal.AddComponent<Crystal>();
-            */
-
             Destroy(hitbox.gameObject);
         }
     }
@@ -118,6 +114,7 @@ public class Hitbox : MonoBehaviour
         {
             timer += Time.deltaTime;
             transform.position += direction * Time.deltaTime * castSpeed;
+            transform.Rotate(0, 0, 8f);
         }
     }
 }
