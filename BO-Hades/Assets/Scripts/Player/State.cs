@@ -15,37 +15,45 @@ public class State : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        var animatorController = animator.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
+        var animatorController = animator.runtimeAnimatorController;
 
         animations.Add(transform, new());
         state.Add(transform, "");
 
-        foreach (var layer in animatorController.layers)
+        var states = new string[]{
+            "Idle",
+            "Attack1",
+            "Attack2",
+            "Attack3",
+            "SpecialQ",
+            "Walking",
+            "Dashing",
+            "Cast",
+            "Placeholder Idle",
+            "metarig|metarigAction_002"
+        };
+
+        foreach (var state in states)
         {
-            foreach (var animationState in layer.stateMachine.states)
+            if (Regex.IsMatch(state, "Attack"))
             {
-                string state = animationState.state.name;
+                int index = int.Parse(Regex.Match(state, @"\d+").Value) - 1;
 
-                if (Regex.IsMatch(state, "Attack"))
-                {
-                    int index = int.Parse(Regex.Match(animationState.state.name, @"\d+").Value) - 1;
-
-                    new Attack(state, this, transform, index);
-                }
-                else if (Regex.IsMatch(state, "Special"))
-                {
-                    string lastDigit = state.Substring(state.Length - 1);
-                    KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), lastDigit);
-
-                    new Special(state, this, transform, key);
-                }
-                else if (Regex.IsMatch(state, "Cast"))
-                {
-                    cast = new Cast(state, this, transform, KeyCode.E);
-                }
-
-                animations[transform].Add(state);
+                new Attack(state, this, transform, index);
             }
+            else if (Regex.IsMatch(state, "Special"))
+            {
+                string lastDigit = state.Substring(state.Length - 1);
+                KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), lastDigit);
+
+                new Special(state, this, transform, key);
+            }
+            else if (Regex.IsMatch(state, "Cast"))
+            {
+                cast = new Cast(state, this, transform, KeyCode.E);
+            }
+
+            animations[transform].Add(state);
         }
 
         ChangeState("Idle");
